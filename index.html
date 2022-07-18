@@ -1,0 +1,1389 @@
+<!--/////////////////////////////////
+ / article:portfolio Home page///////                                                      
+ / author: @Reinhard chemonges//////
+ / date:10-07-2022           ///////
+ / licence:MIT        /////////////
+ /lET'S MAKE THE WORLD A BETTER PLACE
+ / /////////////////////////////////-->    
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+     <head>
+         <meta charset="UTF-8" />
+         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+         <meta name="keywords" content="Document" />
+         <meta name="description" content="Your Description..." />
+         <title>My:Portfolio</title>
+ 
+         <!--link with css and javascript-->
+ 
+ 
+         <link
+             rel="stylesheet"
+             href="resources/swiper js/swiper-bundle.min.css"
+         />
+ 
+ 
+         <link
+             rel="stylesheet"
+             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+         />
+         <link rel="stylesheet" href="resources/css/loader.css" />
+         <link rel="stylesheet" href="resources/css/hamburger.css" />
+ 
+ 
+         <link rel="stylesheet" href="resources/css/home.css" />
+         <link rel="stylesheet" href="resources/css/about.css" />
+         <link rel="stylesheet" href="resources/css/services.css">
+         <link rel="stylesheet" href="resources/css/portfolio.css" />
+         <link rel="stylesheet" href="resources/css/blog.css" />
+         <link rel="stylesheet" href="resources/css/contact.css" />
+ 
+ 
+         <link href="resources/mapbox-gl/mapbox-gl.css" rel="stylesheet" />
+ 
+ 
+         <link rel="stylesheet" href="resources/css/style.css" />
+         <link
+             rel="shortcut icon"
+             href="resources/img/favicon.ico"
+             type="image/x-icon"
+         />
+     </head>
+ 
+ <!--end of links-->
+     
+     <body onload="loaded()">
+         <div class="loader">
+             <div class="c c1"></div>
+             <div class="c c2"></div>
+             <div class="c c3"></div>
+             <div class="c c4"></div>
+             <div class="c c5"></div>
+             <div class="c c6"></div>
+         </div>
+ 
+ 
+ 
+         <script>
+             let loader = document.querySelector(".loader");
+             function loaded() {
+                 loader.classList.add("remove");
+                 setTimeout(() => {
+                     loader.style.display = "none";
+                 }, 1000);
+             }
+         </script>
+ 
+ 
+         <!-- HAMBURGER MENU BUTTON (responsively visible) -->
+         <div class="hamburger">
+             <div class="bar1"></div>
+             <div class="bar2"></div>
+             <div class="bar3"></div>
+         </div>
+ 
+ 
+ 
+ 
+         <!-- THE REAL NAVIGATION -->
+         <nav class="navigation">
+             <h1>
+                 Reinhard
+                 <div></div>
+                 <div></div>
+ 
+                 - 
+             </h1>
+             <ul>
+                 <li><a href="#" onclick="home()">home</a></li>
+                 <li>
+                     <a
+                         href="#"
+                         onclick="about(); animate3.play(); animate4.play();"
+                         >about</a
+                     >
+                 </li>
+                 <li><a href="#" onclick="services(); animate6.play();">services</a></li>
+                 <li><a href="#" onclick="portfolio()">portfolio</a></li>
+                 <li><a href="#" onclick="blog()">blog</a></li>
+                 <li>
+                     <a href="#" onclick="contact(); animate5.play()">contact</a>
+                 </li>
+             </ul>
+             <p> 
+                 &copy;2021 All rights reserved. &trade;Reinhard</p>
+         </nav>
+ 
+         <div class="container">
+             <div class="layer layer1 active">
+                 <div class="home main">
+                     <div class="canvas_container">
+                         <canvas></canvas>
+                     </div>
+ 
+ 
+                     
+ 
+                     <div class="content-for-home">
+                         
+                         <div class="img-container"></div>
+                         <p style="font-family:Trebuchet MS ; color: bisque; text-align:center; max-width: 45em; ">
+                             Am a Junior programmer with full passion in technology, i love reading books and doing research, I am farmiliar with Java,python and C++ etc, However am also studying more about algorithms and data structures ,I'm open to learn coz am quick to adapt and also share my skills to conquer human error lets improve technology and make the world a better place.&#128516;</p>
+                        
+                         <h1 align="center">Reinhard Chemonges</h1>
+                         <div class="social-icons">
+ 
+                             <div class="s-icon">
+                                 <a href="">
+                                     <i class="fab fa-facebook"></i>
+                                 </a>
+                                 <div class="s-name">Facebook</div>
+                             </div>
+                             
+                             <div class="s-icon">
+                                 <a href="https://twitter.com/home">
+                                     <i class="fab fa-twitter"></i>
+                                 </a>
+                                 <div class="s-name">Twitter</div>
+                             </div>
+ 
+ 
+                             <div class="s-icon">
+                                 <a href="https://github.com/reinchemo/reinchemo">
+                                     <i class="fab fa-github"></i>
+                                 </a>
+                                 <div class="s-name">GitHub</div>
+                             </div>
+ 
+                             
+                             <div class="s-icon">
+                                 <a href="https://www.linkedin.com/login">
+                                     <i class="fab fa-linkedin"></i>
+                                 </a>
+                                 <div class="s-name">linkedin</div>
+                             </div>
+ 
+ 
+                             <div class="s-icon">
+                                 <a href="https://www.instagram.com/">
+                                     <i class="fab fa-instagram"></i>
+                                 </a>
+                                 <div class="s-name">Instagram</div>
+                             </div>
+ 
+ 
+                             <div class="s-icon">
+                                 <a href="https://mail.google.com/mail/u/0/?tab=mm#inbox">
+                                     <i class="fas fa-envelope"></i>
+                                 </a>
+                                 <div class="s-name">Email</div>
+                             </div>
+                         </div>
+ 
+                         <div class="side-nav">
+                             <button
+                                 onclick="about(); animate3.play(); animate4.play();"
+                             >
+                                 <span class="w">W</span>
+                                 <span class="tooltip"> why you? </span>
+                             </button>
+                             <button onclick="services(); animate6.play();">
+                                 <span class="w">W</span>
+                                 <span class="tooltip"> what do you do? </span>
+                             </button>
+                             <button onclick="portfolio()">
+                                 <span class="w">W</span>
+                                 <span class="tooltip">
+                                     what have you done?
+                                 </span>
+                             </button>
+                             <button onclick="blog()">
+                                 <span class="w">W</span>
+                                 <span class="tooltip"> what others say? </span>
+                             </button>
+                             <button onclick="contact(); animate5.play()">
+                                 <span class="w">W</span>
+                                 <span class="tooltip"> where are you? </span>
+                             </button>
+                         </div>
+ 
+                         <div class="titles-for-side-nav">
+                             <span></span>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="layer layer2">
+                 <div class="about main">
+ 
+ 
+                     <!-- SEGMENT FOR STYLING. -->
+                     <div class="styling">
+                         <div class="absolute box"></div>
+                         <div class="absolute circle"></div>
+                         <div class="absolute triangle"></div>
+                         <div class="absolute dots">
+                             <div class="dot dot1"></div>
+                             <div class="dot dot2"></div>
+                             <div class="dot dot3"></div>
+                             <div class="dot dot4"></div>
+                             <div class="dot dot5"></div>
+                             <div class="dot dot6"></div>
+                             <div class="dot dot7"></div>
+                             <div class="dot dot8"></div>
+                             <div class="dot dot9"></div>
+                             <div class="dot dot10"></div>
+                             <div class="dot dot11"></div>
+                             <div class="dot dot12"></div>
+                             <div class="dot dot13"></div>
+                             <div class="dot dot14"></div>
+                             <div class="dot dot15"></div>
+                             <div class="dot dot16"></div>
+                             <div class="dot dot17"></div>
+                             <div class="dot dot18"></div>
+                             <div class="dot dot19"></div>
+                             <div class="dot dot20"></div>
+                             <div class="dot dot21"></div>
+                             <div class="dot dot22"></div>
+                             <div class="dot dot23"></div>
+                             <div class="dot dot24"></div>
+                         </div>
+ 
+ 
+                         <svg
+                             class="wave absolute"
+                             xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 1450 320"
+                         >
+                             <path
+                                 fill-opacity="1"
+                                 d="M0,320L48,277.3C96,235,192,149,288,122.7C384,96,480,128,576,165.3C672,203,768,245,864,234.7C960,224,1056,160,1152,112C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                             ></path>
+                         </svg>
+ 
+                         <svg
+                             class="wave absolute opposite"
+                             xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 1450 320"
+                         >
+                             <path
+                                 fill-opacity="1"
+                                 d="M0,224L48,213.3C96,203,192,181,288,192C384,203,480,245,576,218.7C672,192,768,96,864,64C960,32,1056,64,1152,101.3C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                             ></path>
+                         </svg>
+                     </div>
+ 
+                     <!-- REAL CONTENT -->
+                     <div class="wrapper">
+                         <div class="face face1">
+                             <div class="content">
+                                 <p>Hello!,&#128525;&#128525;</p>
+                                 <h1>Reinhard here!</h1>
+                                 <p class="text:font-family: Harlow Solid It; color: crimson">
+                                     I am a Web and software Developer, and I'm very
+                                     passionate and dedicated to it,
+                                     I have acquired the skills and
+                                     knowledge necessary to make your project a
+                                     success I enjoy every step of the design
+                                     process, from discussion, collaboration and implementing.
+                                 </p>
+                                  
+ 
+ 
+ 
+                                 <a
+                                     class="button download"
+                                     href="non"
+                                     download="Reinhard_cv"
+                                     >Download CV</a
+                                 >
+                                 <a
+                                     class="button hire"
+                                     href="#"
+                                     class="hire"
+                                     onclick="contact(); animate5.play()"
+                                     >Hire Me.</a
+                                 >
+                             </div>
+                         </div>
+                         <div class="face face2"></div>
+                     </div>
+ 
+                     <!-- THE NAVIGATION OF ABOUT -->
+                     <nav class="about_nav">
+                         <ul>
+                             <li>
+                                 <a class="active" href="#" data-text="one"
+                                     >Skills</a
+                                 >
+                             </li>
+                            
+                             <li>
+                                 <a href="#" data-text="three">Education</a>
+                             </li>
+                         </ul>
+                     </nav>
+ 
+                     <div class="about_container">
+ 
+ 
+                         <!-- SKILL BOX -->
+                         <div class="skills">
+                             <div class="skill">
+                                 <div class="name">HTML</div>
+                                 <div class="value" style="left: 90%">90%</div>
+                                 <div class="percent">
+                                     <div
+                                         class="progress"
+                                         style="width: 90%"
+                                     ></div>
+                                 </div>
+ 
+ 
+                             </div>
+                             <div class="skill">
+                                 <div class="name">CSS</div>
+                                 <div class="value" style="left: 75%">55%</div>
+                                 <div class="percent">
+                                     <div
+                                         class="progress"
+                                         style="width: 75%"
+                                     ></div>
+                                 </div>
+                             </div>
+ 
+ 
+                             <div class="skill">
+                                 <div class="name">JavaScript</div>
+                                 <div class="value" style="left: 65%">55%</div>
+                                 <div class="percent">
+                                     <div
+                                         class="progress"
+                                         style="width: 65%"
+                                     ></div>
+                                 </div>
+                             </div>
+ 
+ 
+                             <div class="skill">
+                                 <div class="name">PHP</div>
+                                 <div class="value" style="left: 50%">60%</div>
+                                 <div class="percent">
+                                     <div
+                                         class="progress"
+                                         style="width: 50%"
+                                     ></div>
+ 
+                                 </div>
+ 
+                             </div>
+ 
+ 
+                             <div class="skill">
+                                 <div class="name">Visual Basic</div>
+                                 <div class="value" style="left: 50%">50%</div>
+                                 <div class="percent">
+                                     <div
+                                         class="progress"
+                                         style="width: 50%"
+                                     ></div>
+ 
+                                 </div>
+ 
+                             </div>
+ 
+ 
+                             <div class="skill">
+                                 <div class="name">Java</div>
+                                 <div class="value" style="left: 50%">60%</div>
+                                 <div class="percent">
+                                     <div
+                                         class="progress"
+                                         style="width: 50%"
+                                     ></div>
+ 
+                                 </div>
+ 
+                             </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                             <div class="skill">
+                                 <div class="name">Python</div>
+                                 <div class="value" style="left: 45%">45%</div>
+                                 <div class="percent">
+                                     <div
+                                         class="progress"
+                                         style="width: 45%"
+                                     ></div>
+                                 </div>
+                             </div>
+                             <div class="skill">
+                                 <div class="name">C&C++</div>
+                                 <div class="value" style="left: 55%">55%</div>
+                                 <div class="percent">
+                                     <div
+                                         class="progress"
+                                         style="width: 55%"
+                                     ></div>
+                                 </div>
+                             </div>
+                         </div>
+ 
+ 
+ 
+                         <!-- EXPERIENCE -->
+                         <div class="experience">
+                             <div class="middle_line"></div>
+                             <div class="cover">
+                                 <i class="job_box fas fa-briefcase"></i>
+ 
+                                 <i class="date">Sep 2020 - Present</i>
+                                 <h2>Full Stack Developer</h2>
+                                 <i class="name_company">Company Name</i>
+ 
+                                 <article class="text_hidden">
+                                     Lorem ipsum dolor sit amet consectetur
+                                     adipisicing elit. Ut sint magnam ipsam
+                                     eveniet omnis nemo commodi dolorum neque
+                                     fugiat, soluta tempora vitae error magni.
+                                     Lorem ipsum dolor sit amet consectetur
+                                     adipisicing elit. Quaerat est amet
+                                     voluptatibus, nam perferendis provident
+                                     veritatis cum, dolorum eaque voluptates
+                                     asperiores, nostrum voluptatum. Autem
+                                     incidunt praesentium tempora, minus suscipit
+                                     fugiat?
+                                 </article>
+                             </div>
+ 
+                             <div class="whitespace"></div>
+                             <div class="whitespace"></div>
+ 
+                             <div class="cover">
+                                 <i class="job_box fas fa-briefcase"></i>
+                                 <i class="date">Apr 2020 - Jan 2019</i>
+                                 <h2>Full Stack Developer</h2>
+                                 <i class="name_company">Company Name</i>
+                                 <article class="text_hidden">
+                                     Lorem ipsum dolor sit amet consectetur
+                                     adipisicing elit. Ut sint magnam ipsam
+                                     eveniet omnis nemo commodi dolorum neque
+                                     fugiat, soluta tempora vitae error magni.
+                                 </article>
+                             </div>        
+ 
+ <!--end of experience-->
+                         </div>
+ 
+ 
+ 
+ 
+                         <div class="education">
+                             <div class="middle_line"></div>
+                             <div class="cover">
+                                 <i class="job_box fas fa-book-reader"></i>
+                                 <i class="date">2019 - 2022</i>
+                                 <h2>Zetech University</h2>
+                                 <i class="name_company">Nairobi.</i>
+                                
+ 
+                                 
+                                 <article class="text_hidden">
+                                     Completed my studies i've interacted with multiple languages,
+                                     and am passionate in software and web development,However i also have skills in other fields i.e Networking am certified by Cisco.
+ 
+                                 </article>
+                             </div>
+                             <div class="whitespace"></div>
+                             <div class="whitespace"></div>
+                             <div class="cover">
+                                 <i class="job_box fas fa-book-reader"></i>
+                                 <i class="date">2022</i>
+                                 <h2>Gearbox Academy</h2>
+                                 <i class="name_company">Nairobi</i>
+                                 <article class="text_hidden">
+                                     I'm an intern have interacted with students from different institutions like university of southampton doing different courses i.e Electrical,Mechanical,Telecommunication and Computer engineering,
+                                     i have gained skills in IoT,Automation of sensors using arduino, plus we are doing a door automation project.In addition i have had  lots of interactions with people from big companies like Tesla.
+                                 </article>
+                             </div>
+                             <div class="cover">
+                                 <i class="job_box fas fa-book-open"></i>
+                                 <i class="date">2020</i>
+                                 <h2>Treehouse Community</h2>
+                                 <i class="name_company">Portland</i>
+                                 <article class="text_hidden">
+                                     I did a short online Course 
+                                     i learnt basic skills of what python can do 
+                                     and also did a simple project of (a calculator and a number decimal number converter to any base number).
+                                     i also have other sketchy projects in my github.
+ 
+                                 </article>
+                             </div>
+                             <div class="whitespace"></div>
+                             <div class="whitespace"></div>
+                             <div class="cover">
+                                 <i class="job_box fas fa-book-open"></i>
+                                 <i class="date">2015 - 2018</i>
+                                 <h2>St Joseph's boys</h2>
+                                 <i class="name_company">Kitale.</i>
+                                 <article class="text_hidden">
+                                     
+                                 </article>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="layer layer3">
+                 <div class="services main">
+ 
+ 
+                     <!-- <section class="background">
+                         <div class="bg_wrapper"></div>
+                     </section> -->
+                     <div class="hero">
+                         <span class="typography">
+                             <span class="t_dummy">I know how to</span> <br />
+                             <span class="t-box">
+                                 <span class="box-side box-front"
+                                     >take risk</span
+                                 >
+                                 <span class="box-side box-top"
+                                     >take a side</span
+                                 >
+                                 <span class="box-side box-back"
+                                     >be different</span
+                                 >
+                                 <span class="box-side box-bottom"
+                                     >be innovative</span
+                                 >
+                             </span>
+                         </span>
+                         <p class="hero-text">
+                             I am a passionate web & software Developer,
+                             i can work well with a team but im also self managed,in addition 
+                             i always go the extra mile
+                             to bring perfection.
+                         </p>
+                     </div>
+                     <div class="capabilities left move-little-down">
+                         <img src="resources/img/elements/web_bg.png" alt="" />
+                         <p class="c_content">
+                             <span class="c_title">Web</span>
+                             My creative journey started with Web development.i used to
+                             code my own designs, i learned simple basic of coding after
+                              i finished my highschool and the passion has grown till now  
+                             since then i've worked hard to stay relevant in many
+                             fields. For smooth collaboration with clients and for my flexibility i am
+                             nowadays using programing languages for designing
+                             and prototyping IOT sensors and many others.
+                             <br />
+                             <a href="#">Learn More</a>
+                             <i class="far fa-arrow-alt-circle-right"></i>
+                         </p>
+                     </div>
+                     <div class="capabilities right">
+                         <p class="c_content">
+ 
+                             <span class="c_title">Graphics</span>
+                             With a designers eye for details, am
+                             passionate about implementing designes into highly
+                             interactive experience by paying close attention to
+                             details, animations and performances.
+                             <br />
+                             <a href="#">Learn More</a>
+                             <i class="far fa-arrow-alt-circle-right"></i>
+                         </p>
+                         <img
+                             src="resources/img/elements/graphics_bg.png"
+                             alt=""
+                         />
+                     </div>
+ 
+ 
+                     <div class="capabilities left">
+                         <img
+                             src="resources/img/elements/seo_bg.png"
+                             alt=""
+                             style="
+                                 background: #2929292f;
+                                 backdrop-filter: blur(4px);
+                                 border-radius: 40px;
+                             "
+                         />
+                         <p class="c_content">
+                             <span class="c_title">SEO</span>
+                             With 1+ years of experience in the technology world,
+                             i've proved that the combination of strategic thinking
+                             and expertise will create a fascinating digital
+                             experience and take whe world to the next step.
+                             <br />
+                             <a href="#">Learn More</a>
+                             <i class="far fa-arrow-alt-circle-right"></i>
+                         </p>
+                     </div>
+ 
+ 
+ 
+                     <div class="foot">
+                         <h2>Project:</h2>
+ 
+ 
+                         <div class="foot-link">
+                     
+                             <p class="text:font-family: Harlow Solid It; color: crimson">
+                                 I did a motion detection project(prototype) using an arduino and a PIR sensor, i used a GSM to link to my device(phone)
+                                 which alerts me by sending a message incase of movements.the project can be used to enhance
+                                 security in both home and companies.
+                             </p>
+ 
+                         </div>
+ 
+                         
+                         
+ 
+ 
+ 
+ 
+ 
+ <!--portfoliorein-->
+ 
+ 
+ 
+ 
+ 
+                         <div class="foot-link">
+                             <a href="#" onclick="portfolio()">Hoover to see </a>
+                             <i class="far fa-arrow-alt-circle-right"></i>
+ 
+ 
+ 
+ 
+                             <img src="https://hackster.imgix.net/uploads/attachments/1195804/capa485_6bIEAqzt9Q.png?auto=compress%2Cformat&w=1280&h=960&fit=max" alt="Girl in a jacket" width="1500" height="600">
+                             
+                         </div>
+ 
+ 
+                     </div>
+                 </div>
+             </div>
+             <div class="layer layer4">
+                 <div class="portfolio main">
+                     <div class="tip main">
+                         <div class="allContent">
+                             <div class="description" style="display: none">
+                                 <div class="pro_intro">
+                                     <div class="nameplate">
+                                         <h1>Wedding Couple</h1>
+ 
+ 
+                                         
+                                         <span
+                                             >Category:
+                                             <span style="color: #999"
+                                                 >Web Design</span
+                                             ></span
+                                         >
+                                     </div>
+                                     <div class="other_text">
+                                         <h2>Project Brief:</h2>
+                                         <p
+                                             class="pro_brief"
+                                             style="
+                                                 color: #999;
+                                                 padding-left: 15px;
+                                             "
+                                         >
+                                             Lorem ipsum, dolor sit amet
+                                             consectetur adipisicing elit. At
+                                             corrupti modi perferendis iure
+                                             corporis dolores minus asperiores
+                                             nemo debitis veritatis id placeat,
+                                             similique eum recusandae ipsa quia
+                                             cum earum nam?
+                                         </p>
+                                     </div>
+                                 </div>
+                                 <div class="pro_info">
+                                     <h2>Project Info</h2>
+                                     <p class="Date">
+                                         <b>Date: </b>
+                                         <span style="color: #999">2020</span>
+                                     </p>
+                                     <p class="client">
+                                         <b>Client: </b>
+                                         <span style="color: #999">xyz</span>
+                                     </p>
+                                     <p>
+                                         <b>Tools: </b>
+                                         <span style="color: #999"
+                                             >HTML, CSS, JavaScript</span
+                                         >
+                                     </p>
+                                     <p class="link">
+                                         <b>Web: </b>
+                                         <span style="color: #999"
+                                             ><a href="#"
+                                                 >www.domain.com</a
+                                             ></span
+                                         >
+                                     </p>
+                                 </div>
+                             </div>
+ 
+                             <button class="closeButton">
+                                 <span>Project Details</span>
+                                 <div class="icon"></div>
+                             </button>
+                             <button class="exitButton">&times;</button>
+ 
+                             <div class="port_content">
+                                 <div class="swiper-container-2">
+                                     <div class="swiper-wrapper">
+                                         <div class="swiper-slide">
+                                             <img src="#" alt="web design" />
+                                         </div>
+                                         <div class="swiper-slide">
+                                             <img src="#" alt="web design" />
+                                         </div>
+                                         <div class="swiper-slide">
+                                             <img src="#" alt="web design" />
+                                         </div>
+                                         <div class="swiper-slide">
+                                             <img src="#" alt="web design" />
+                                         </div>
+                                         <div class="swiper-slide">
+                                             <img src="#" alt="web design" />
+                                         </div>
+                                         <div class="swiper-slide">
+                                             <img src="#" alt="web design" />
+                                         </div>
+                                         <div class="swiper-slide">
+                                             <img src="#" alt="web design" />
+                                         </div>
+                                         <div class="swiper-slide">
+                                             <img src="#" alt="web design" />
+                                         </div>
+                                         <div class="swiper-slide">
+                                             <img src="#" alt="web design" />
+                                         </div>
+                                     </div>
+                                     <!-- Add Pagination -->
+                                     <div class="swiper-scrollbar"></div>
+                                     <!-- Add Arrows -->
+                                     <div class="swiper-button-next"></div>
+                                     <div class="swiper-button-prev"></div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <nav class="about_nav padding_top">
+                         <ul>
+                             <li>
+                                 <a
+                                     class="filter active"
+                                     href="#"
+                                     data-filter="all"
+                                     >All</a
+                                 >
+                             </li>
+                             <li>
+                                 <a class="filter" href="#" data-filter=".web"
+                                     >Web Design</a
+                                 >
+                             </li>
+                             <li>
+                                 <a class="filter" href="#" data-filter=".logo"
+                                     >Logo</a
+                                 >
+                             </li>
+                             <li>
+                                 <a class="filter" href="#" data-filter=".card"
+                                     >Cards</a
+                                 >
+                             </li>
+                             <li>
+                                 <a class="filter" href="#" data-filter=".app"
+                                     >Apps</a
+                                 >
+                             </li>
+                             <li>
+                                 <a class="filter" href="#" data-filter=".icon"
+                                     >Icons</a
+                                 >
+                             </li>
+                         </ul>
+                     </nav>
+ 
+ 
+                     <div class="mymixcont">
+                         <div class="mix web">
+                             <img
+                                 src="data:image/png;base64,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"
+                                 alt=""
+                             />
+                             <span class="title">Trading Website</span>
+                             <span class="port_link"></span>
+                         </div>
+                         <div class="mix icon">
+                             <img
+                                 src="resources/img/portfolios/icon/5.jpg"
+                                 alt=""
+                             />
+                             <span class="title">Water World</span>
+                             <span class="port_link"></span>
+                         </div>
+ 
+ 
+                         <!-- <div class="mix card">
+                             <img
+                                 src="resources/img/portfolios/card/1.jpg"
+                                 alt=""
+                             />
+                             <span class="title">Brand Photography</span>
+                             <span class="port_link"></span>
+                         </div> -->
+ 
+ 
+                         <!-- <div class="mix web">
+                             <img
+                                 src="resources/img/portfolios/web/2.jpg"
+                                 alt=""
+                             />
+                             <span class="title">Student Guide</span>
+                             <span class="port_link"></span>
+                         </div> -->
+ 
+ 
+ 
+                         <div class="mix app">
+                             <img
+                                 src="resources/img/portfolios/app/1.jpg"
+                                 alt=""
+                             />
+                             <span class="title">Cake Website</span>
+                             <span class="port_link"></span>
+                         </div>
+ 
+ 
+ <!-- 
+                         <div class="mix card">
+                             <img
+                                 src="resources/img/portfolios/card/2.jpg"
+                                 alt=""
+                             />
+                             <span class="title">Art Direr</span>
+                             <span class="port_link">View Project</span>
+                         </div> -->
+ 
+ 
+                         <div class="mix web">
+                             <img
+                                 src="https://media.credencys.com/wp-content/uploads/2019/06/web-app-development-frameworks1.jpg"
+                                 alt=""
+                             />
+                             <span class="title">Web Apps </span>
+                             <span class="port_link"></span>
+                         </div>
+                         <div class="mix card">
+                             <img
+                                 src="https://media-exp1.licdn.com/dms/image/sync/C4D27AQHqWNMXIaTHdw/articleshare-shrink_1280_800/0/1657185402796?e=1658134800&v=beta&t=KKfkCtnmRU9knaEe-d8UoQa1Qn_OSzomA9GGXzsxjzU"
+                                 alt=""
+                             />
+                             <span class="title">Cisco </span>
+                             <span class="port_link"></span>
+                         </div>
+ 
+                         <div class="mix web">
+                             <img
+                                 src="resources/img/portfolios/web/4.jpg"
+                                 alt=""
+                             />
+                             <span class="title">Sonor Design</span>
+                             <span class="port_link"></span>
+                         </div>
+ 
+ 
+                         <div class="mix card">
+                             <img
+                                 src="https://textbookcentre.com/media/products/2010141002908.jpg"
+                                 alt=""
+                             />
+                             <span class="title">Ken walibora</span>
+                             <span class="port_link"></span>
+                         </div>
+ 
+ 
+                         <div class="mix logo">
+                             <img
+                                 src="https://cdn4.dogonews.com/images/ea71b907-849c-443c-b0ed-d61e63c073af/hellokittyisnotacat.jpg"
+                                 alt=""
+                             />
+                             <span class="title">Kitty Pic</span>
+                             <span class="port_link"></span>
+                         </div>
+ 
+ 
+                         <div class="mix icon">
+                             <img
+                                 src="resources/img/portfolios/icon/4.jpg"
+                                 alt=""
+                             />
+                             <span class="title">Domine</span>
+                             <!-- <span class="port_link">View Project</span> -->
+                         </div>
+                         <div class="mix app">
+                             <img
+                                 src="resources/img/portfolios/app/2.jpg"
+                                 alt=""
+                             />
+                             <span class="title">Profile World</span>
+                             <span class="port_link"></span>
+                         </div>
+ 
+ 
+                         <div class="mix logo">
+                             <img
+                                 src="https://constructionreviewonline.com/wp-content/uploads/2014/02/Zetech-Main-Campus.jpg"
+                                 alt=""
+                             />
+                             <span class="title">Zetech Main</span>
+                             <span class="port_link"></span>
+                         </div>
+ 
+ 
+                         <div class="mix logo">
+                             <img
+                                 src="resources/img/portfolios/logo/3.jpg"
+                                 alt=""
+                             />
+                             <span class="title">Native Design</span>
+                             <span class="port_link"></span>
+                         </div>
+                         <div class="mix card">
+                             <img
+                                 src="https://pbs.twimg.com/media/FGmBTwrXIAwfZ3v?format=jpg&name=small"
+                                 alt=""
+                             />
+                             <span class="title">pep Guardiola</span>
+                             <span class="port_link"></span>
+                         </div>
+                         <div class="mix logo">
+                             <img
+                                 src="resources/img/portfolios/logo/4.jpg"
+                                 alt=""
+                             />
+                             <span class="title">Book Worm</span>
+                             <span class="port_link"></span>
+                         </div>
+                         <div class="mix icon">
+                             <img
+                                 src="resources/img/portfolios/icon/2.jpg"
+                                 alt=""
+                             />
+                             <span class="title">Football FC</span>
+                             <span class="port_link"></span>
+                         </div>
+                         <div class="mix logo">
+                             <img
+                                 src="resources/img/portfolios/logo/5.jpg"
+                                 alt=""
+                             />
+                             <span class="title">Free Notes</span>
+                             <span class="port_link"></span>
+                         </div>
+                         <div class="mix icon">
+                             <img
+                                 src="resources/img/portfolios/icon/1.jpg"
+                                 alt=""
+                             />
+                             <span class="title">Insta Genre</span>
+                             <span class="port_link"></span>
+                         </div>
+ 
+                         <div class="mix logo">
+                             <img
+                                 src="https://i.insider.com/61e1b70a04ce6e0018d74b2b?width=1000&format=jpeg&auto=webp"
+                                 alt=""
+                             />
+                             <span class="title">Movie Shop</span>
+                             <span class="port_link"></span>
+                         </div>
+ 
+                         <div class="mix logo">
+                             <img
+                                 src="resources/img/portfolios/logo/7.jpg"
+                                 alt=""
+                             />
+                             <span class="title">Village Community Church</span>
+                             <span class="port_link"></span>
+                         </div>
+                         <div class="mix app">
+                             <img
+                                 src="resources/img/portfolios/app/3.jpg"
+                                 alt=""
+                             />
+                             <span class="title">Weather check</span>
+                             <span class="port_link"></span>
+                         </div>
+ 
+ 
+                        
+ 
+ 
+                     </div>
+                 </div>
+             </div>
+ 
+        
+             <div class="layer layer5">
+                 <div class="testimonial">
+                     <h1>
+                         <span>See What Clients Say about Me.</span>
+                     </h1>
+                     <div class="swiper-container">
+                         <div class="swiper-wrapper">
+                             <div class="swiper-slide">
+                                 <img src="https://img.favpng.com/6/13/22/thumb-illustration-vector-graphics-royalty-free-human-png-favpng-JjHxMqaDX5sdhsN8AWPSDtUyZ.jpg" alt="" />
+                                 <h4>Stanley</h4>
+                                 <div class="rating">
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                 </div>
+                                 <p>
+                                     <span>&ldquo;</span>
+                                     Reinhard is an excellent web designer and
+                                  He’s a pleasure to
+                                     work with, great value for money and will
+                                     always go the extra mile to bring you the best.
+                                 </p>
+                             </div>
+                             <div class="swiper-slide">
+                                 <img src="https://img1.pnghut.com/8/1/13/DTUZxwHJ3v/human-cartoon-hindi-scalable-vector-graphics-gentleman.jpg" alt="" />
+                                 <h4>Fred</h4>
+                                 <div class="rating">
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                 </div>
+                                 <p>
+                                     <span>&ldquo;</span>
+                                     Reinhard is an excellent web designer and
+                                     faultless technician. He’s a pleasure to
+                                     work with, great value for money and will
+                                     always go the extra mile when necessary.
+                                 </p>
+                             </div>
+                             <div class="swiper-slide">
+                                 <img src="https://pngset.com/images/2-animation-hd-person-human-hand-elf-transparent-png-2451456.png" alt="" />
+                                 <h4>Titus</h4>
+                                 <div class="rating">
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                 </div>
+                                 <p>
+                                     <span>&ldquo;</span>
+                                     He is an excellent web designer and
+                                     faultless technician. He’s a pleasure to
+                                     work with, great value for money and will
+                                     always go the extra mile when necessary.
+                                 </p>
+                             </div>
+                             <div class="swiper-slide">
+                                 <img src="https://i.pinimg.com/originals/65/a4/5a/65a45a0b5b2a60e402bbf764d20a3856.png" alt="" />
+                                 <h4>David</h4>
+                                 <div class="rating">
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                 </div>
+                                 <p>
+                                     <span>&ldquo;</span>
+                                     Reinhard is an excellent web designer and
+                                     faultless technician. He’s a pleasure to
+                                     work with, great value for money and will
+                                     always go the extra mile when necessary.
+                                 </p>
+                             </div>
+                             <div class="swiper-slide">
+                                 <img src="https://pngroyale.com/wp-content/uploads/2022/04/Smiling-Cartoons-Transparent-Images.png" alt="" />
+                                 <h4>John</h4>
+                                 <div class="rating">
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                 </div>
+                                 <p>
+                                     <span>&ldquo;</span>
+                                     Reinhard is an excellent web designer and
+                                     faultless technician. He’s a pleasure to
+                                     work with, great value for money and will
+                                     always go the extra mile when necessary.
+                                 </p>
+                             </div>
+                             <div class="swiper-slide">
+                                 <img src="https://www.westfield.ma.edu/PersonalPages/draker/edcom/final/Fa18/sectiona/hammerhill/Cool%20Dude.png" alt="" />
+                                 <h4>Ken</h4>
+                                 <div class="rating">
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                     <label>&starf;</label>
+                                 </div>
+                                 <p>
+                                     <span>&ldquo;</span>
+                                     Reinhard is an excellent web designer and
+                                     faultless technician. He’s a pleasure to
+                                     work with, great value for money and will
+                                     always go the extra mile when necessary.
+                                 </p>
+                             </div>
+                         </div>
+                         <!-- Add Pagination -->
+                         <div class="swiper-pagination"></div>
+                         <div class="swiper-button-next"></div>
+                         <div class="swiper-button-prev"></div>
+                     </div>
+                 </div>
+             </div>
+             <div class="layer layer6">
+                 <div class="contact_us">
+                     <div id="map"></div>
+                     
+                     <address class="info_container">
+                         <div class="info info1">
+                             <i class="fas fa-phone-alt"></i>
+                             <span class="iname">Phone</span>
+                             <a href="#">+254759592457</a>
+                            
+                         </div>
+                         <div class="info info2">
+                             <i class="fas fa-home"></i>
+                             <span class="iname">Address</span>
+                             <a
+                                 href="https://goo.gl/maps/qi3mznUx7MJUqv1y5"
+                             >
+                                 <h3>Kenya</h3>
+                                 <span>Nairobi</span><br />
+                                 <span>Riruta</span>
+                             </a>
+                         </div>
+                         <div class="info info3">
+                             <i class="fas fa-envelope"></i>
+                             <span class="iname">Email</span>
+                             <a href=""
+                                 >chemorein24@gmail.com</a
+                             >
+                             
+                         </div>
+                     </address>
+ 
+ 
+ <!--form area-->
+ 
+ <form id="my-form" action="https://formspree.io/f/mjvljrrk" method="POST">
+                         <h1>Get In Touch</h1>
+                         <div class="inp_field">
+                             <i class="fas fa-user"></i>
+                             <input
+                                 type="text"
+                                 name="name"
+                                 class="fname"
+                                 id="fname"
+                                 placeholder="Full Name"
+                                 required
+                             />
+                         </div>
+                         <div class="inp_field">
+                             <i class="fas fa-envelope"></i>
+                             <input
+                                 type="email"
+                                 name="email"
+                                 class="email"
+                                 id="email"
+                                 placeholder="Email"
+                                 required
+                             />
+                         </div>
+                         
+                         <textarea
+                             name="message"
+                             cols="30"
+                             rows="5"
+                             class="message"
+                             id="message"
+                             placeholder="Message"
+                             required
+                         ></textarea>
+                         <button class="submit" id="submit">Submit</button>
+                     </form>
+ 
+                     
+ 
+ <!--end area of form area -->
+ 
+ 
+                 </div>
+             </div>
+         </div>
+ 
+         <!-----------------JQUERY {https://jquery.com/} [USED IN portfolio.js]----------------->
+         <script src="resources/js/jquery.min.js"></script>
+         <!-----------------MIX IT UP {https://www.kunkalabs.com/mixitup/} [USED IN portfolio.js]----------------->
+         <script src="resources/js/mixitup.min.js"></script>
+         <!-----------------SWIPER JS {https://swiperjs.com/} [USED IN portfolio.js, blog.js]----------------->
+         <script src="resources/swiper js/swiper-bundle.min.js"></script>
+         <!-----------------MAPBOX GL {https://www.mapbox.com/} [USED IN contact.js]----------------->
+         <script src="resources/mapbox-gl/mapbox-gl.js"></script>
+         <!-----------------EMAIL JS {https://www.emailjs.com/} [USED IN contact.js]----------------->
+         <script src="resources/js/email.min.js"></script>
+         <!-----------------ADDITIONAL SCRIPT FOR EMAIL JS----------------->
+         <script type="text/javascript">
+ 
+             (function () {
+                 emailjs.init("user_5OMETIDQ2Nm9qBMtaFNz4");
+             })();
+         </script>
+ 
+         <!-----------------VANILLA TILT JS {https://micku7zu.github.io/vanilla-tilt.js/}----------------->
+         <script src="resources/js/vanilla-tilt.min.js"></script>
+         <!-----------------ANIME JS {https://animejs.com/} [USED LOCALLY.]----------------->
+         <script src="resources/js/anime.min.js"></script>
+         <!-----------------LOCAL (HOME)----------------->
+         <script src="resources/js/home.js"></script>
+         <!-----------------LOCAL (ABOUT)----------------->
+         <script src="resources/js/about.js"></script>
+         <!-----------------LOCAL (SERVICES)----------------->
+         <script src="resources/js/services.js"></script>
+         <!-----------------LOCAL (PORTFOLIO)----------------->
+         <script src="resources/js/portfolio.js"></script>
+         <!-----------------LOCAL (BLOG)----------------->
+         <script src="resources/js/blog.js"></script>
+         <!-----------------LOCAL (CONTACT)----------------->
+         <script src="resources/js/contact.js"></script>
+         <!-----------------LOCAL (MAIN FILE)----------------->
+         <script src="resources/js/main.js"></script>
+ 
+         <!-----------------LOCAL (MAIN FILE { USED TO ANIMATE WEBPAGE.})----------------->
+         <script>
+             
+             const animate1 = anime.timeline({
+                 targets: ".circle",
+                 loop: true,
+                 duration: 2000,
+                 direction: "alternate",
+                 easing: "easeInOutQuad",
+             });
+             animate1.add({
+                 translateX: 350,
+             });
+ 
+             let dot = document.querySelectorAll(".dot");
+             for (let i = 0; i < dot.length; i++) {
+                 const ind = dot[i];
+                 const animate2 = anime.timeline({
+                     targets: ind,
+                     loop: true,
+                     direction: "alternate",
+                     delay: i * 100,
+                 });
+                 animate2.add({
+                     scale: 2,
+                 });
+             }
+ 
+             let span = document.querySelectorAll(".content .text span");
+             const animate3 = anime.timeline({
+                 targets: span,
+                 easing: "easeInOutExpo",
+                 delay: anime.stagger(20, { direction: "reverse" }),
+                 direction: "reverse",
+                 autoplay: false,
+             });
+ 
+             animate3.add({
+                 rotate: () => {
+                     return anime.random(-360, 360);
+                 },
+                 translateX: () => {
+                     return anime.random(-500, 500);
+                 },
+                 translateY: () => {
+                     return anime.random(-500, 500);
+                 },
+                 duration: 3000,
+             });
+ 
+             const animate4 = anime({
+                 targets: ".button",
+                 scale: [0, 1],
+                 delay: anime.stagger(200, { start: 7000 }),
+                 autoplay: false,
+             });
+ 
+             const animate5 = anime({
+                 targets: [
+                     document.querySelectorAll(".info"),
+                     document.querySelectorAll(".inp_field"),
+                     ".message",
+                     ".submit",
+                 ],
+                 translateY: [50, 0],
+                 rotateX: [90, 0],
+                 opacity: [0, 1],
+                 delay: anime.stagger(300, { start: 1000 }),
+                 duration: 750,
+                 autoplay: false,
+                 easing: "easeOutQuint",
+             });
+             
+             const animate6 = anime({
+                 targets: ['.services .t_dummy', '.services .hero-text'],
+                 duration: 1000,
+                 scaleX: [0, 1],
+                 delay: anime.stagger(300, {start: 1000}),
+                 autoplay: false,
+             });
+ 
+             function resize() {
+                 if (window.innerWidth <= 632) {
+                     animate5.play();
+                     animate3.play();
+                     animate4.play();
+                     animate6.play();
+                 }
+             }
+             resize();
+             window.addEventListener("resize", resize);
+         </script>
+     </body>
+ </html>
+ 
